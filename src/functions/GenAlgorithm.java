@@ -88,16 +88,18 @@ public abstract class GenAlgorithm {
         for (int i = 0; i < 1000; i++){
             for (int child = 0; child < 2 * genSize || ngeneration.size() < genSize; child++) {
                 int parentNumber = random.nextInt() % genSize;
-                parentNumber = (parentNumber < 0) ? -parentNumber : parentNumber;
-                int parent1 = generation.get(parentNumber).gen;
+                /*parentNumber = (parentNumber < 0) ? -parentNumber : parentNumber;
+                Point parent1 = generation.get(parentNumber);
                 parentNumber = random.nextInt() % genSize;
                 parentNumber = (parentNumber < 0) ? -parentNumber : parentNumber;
-                int parent2 = generation.get(parentNumber).gen;
+                Point parent2 = generation.get(parentNumber);*/
+                Point parent1 = generation.get(probability(generation));
+                Point parent2 = generation.get(probability(generation));
                 if (parent1 == parent2) {
                     child--;
                     continue;
                 }
-                if (random.nextDouble() < crossoverChance) gen = getChild(parent1, parent2);
+                if (random.nextDouble() < crossoverChance) gen = getChild(parent1.gen, parent2.gen);
                 else continue;
                 fitness = function(gen);
                 nextGenerationChild = new Point(gen, fitness);
@@ -128,5 +130,30 @@ public abstract class GenAlgorithm {
             ngeneration.clear();
         }
         return decoding(bestgen);
+    }
+
+    public int probability(ArrayList<Point> array){
+        ArrayList<Double> newarray = new ArrayList<>();
+        double s = 0;
+        for (int i = 0; i < array.size(); i++){
+            s += array.get(i).fitness;
+        }
+        for (int i = 0; i < array.size(); i++){
+            newarray.add(1 - (array.get(i).fitness/s));
+        }
+        s = 0;
+        for (int i = 0; i < array.size(); i++){
+            s += newarray.get(i);
+        }
+        newarray.set(0, newarray.get(0)/s);
+        for (int i = 1; i < newarray.size(); i++){
+            newarray.set(i, newarray.get(i-1) + (newarray.get(i)/s));
+        }
+        Random rand = new Random();
+        double r = rand.nextDouble();
+        for (int chance = 0; chance < array.size() - 1; chance++){
+            if (r < newarray.get(chance)) return chance;
+        }
+        return newarray.size() - 1;
     }
 }
