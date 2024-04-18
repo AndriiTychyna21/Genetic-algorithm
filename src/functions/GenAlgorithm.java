@@ -77,7 +77,8 @@ public abstract class GenAlgorithm {
         double fitness;
         Random random = new Random();
         for (int i = 0; i < genSize; i++){
-            generation.add(new Point(random.nextInt(), 0));
+            gen = random.nextInt();
+            generation.add(new Point(gen, function(gen)));
             fitness = function(generation.get(i).gen);
             if (fitness < minimum){
                 minimum = fitness;
