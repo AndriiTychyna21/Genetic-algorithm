@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4a84d8f-8d4a-4d4b-8db0-1820672c4e51" name="Changes" comment="better parents">
+    <list default="true" id="f4a84d8f-8d4a-4d4b-8db0-1820672c4e51" name="Changes" comment="better parents v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/GenAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/GenAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
       <workItem from="1713087498900" duration="45000" />
       <workItem from="1713461273690" duration="5357000" />
       <workItem from="1713468897501" duration="2887000" />
-      <workItem from="1713472102560" duration="1610000" />
+      <workItem from="1713472102560" duration="3026000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -93,7 +94,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713472992813</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="better parents">
+      <option name="closed" value="true" />
+      <created>1713473877566</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713473877566</updated>
+    </task>
+    <task id="LOCAL-00004" summary="better parents v2">
+      <option name="closed" value="true" />
+      <created>1713473898704</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713473898704</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,18 +119,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="better parents" />
-    <option name="LAST_COMMIT_MESSAGE" value="better parents" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/functions/GenAlgorithm.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="better parents v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="better parents v2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

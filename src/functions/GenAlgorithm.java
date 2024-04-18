@@ -89,13 +89,13 @@ public abstract class GenAlgorithm {
         for (int i = 0; i < 1000; i++){
             for (int child = 0; child < 2 * genSize || ngeneration.size() < genSize; child++) {
                 int parentNumber = random.nextInt() % genSize;
-                /*parentNumber = (parentNumber < 0) ? -parentNumber : parentNumber;
+                parentNumber = (parentNumber < 0) ? -parentNumber : parentNumber;
                 Point parent1 = generation.get(parentNumber);
                 parentNumber = random.nextInt() % genSize;
                 parentNumber = (parentNumber < 0) ? -parentNumber : parentNumber;
-                Point parent2 = generation.get(parentNumber);*/
-                Point parent1 = generation.get(probability(generation));
-                Point parent2 = generation.get(probability(generation));
+                Point parent2 = generation.get(parentNumber);
+                //Point parent1 = generation.get(probability(generation));
+                //Point parent2 = generation.get(probability(generation));
                 if (parent1 == parent2) {
                     child--;
                     continue;
@@ -124,8 +124,8 @@ public abstract class GenAlgorithm {
                   generation.add(ngeneration.get(element));
                   /*rand_elem = random.nextInt(ngeneration.size()) ;
                   generation.add(ngeneration.get(rand_elem));
-                  ngeneration.remove(rand_elem);
-                  */
+                  ngeneration.remove(rand_elem);*/
+
             }
 
             ngeneration.clear();
